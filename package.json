@@ -1,0 +1,16 @@
+{
+  "name": "starterpack-hack-heart",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/dartmouth-cs52-20S/starterpack-hack-heart.git",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Chibuzo Chiwike <chibuzo.m.chiwike.22@dartmouth.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
