@@ -2,4 +2,8 @@ dist
 node_modules
 yarn-error.log
 .DS_Store
+<<<<<<< HEAD
 .idea
+=======
+.vscode
+>>>>>>> 4d9952b2468da5523a7142c4b4943aa46303b59d
