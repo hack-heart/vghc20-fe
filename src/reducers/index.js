@@ -1,11 +1,22 @@
-// the starting point for your redux store
-// this defines what your store state will look like
 import { combineReducers } from 'redux';
+import { persistReducer } from 'redux-persist';
+import storageSession from 'redux-persist/lib/storage/session';
+import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
 
-import CountReducer from './count-reducer';
+import companyReducer from './company-reducer';
+import sessionReducer from './session-reducer';
 
 const rootReducer = combineReducers({
-  count: CountReducer,
+  companies: companyReducer,
+  session: sessionReducer,
 });
 
-export default rootReducer;
+const persistConfig = {
+  key: 'root',
+  storage: storageSession,
+  stateReconciler: hardSet,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export default persistedReducer;
