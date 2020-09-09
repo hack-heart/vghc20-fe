@@ -11,7 +11,7 @@ const sessionReducer = (state = initialState, action) => produce(state, (draft) 
   switch (action.type) {
     case ActionTypes.ADD_COMPANY: {
       const { idx, element } = action.payload;
-      if (!state.companies.includes(element)) {
+      if (element == null || !state.companies.includes(element)) {
         draft.companies[idx] = element;
       }
       break;
